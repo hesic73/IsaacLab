@@ -214,6 +214,9 @@ class RslRlMultiCriticPpoAlgorithmCfg:
     schedule: str = MISSING
     """The learning rate schedule."""
 
+    adaptive_lr_factor: float = MISSING
+    """The adaptive learning rate factor."""
+
     gamma: float = MISSING
     """The discount factor."""
 
@@ -246,10 +249,10 @@ class MultiCriticPPORunnerCfg:
     empirical_normalization: bool = MISSING
     """Whether to use empirical normalization."""
 
-    policy: RslRlPpoActorCriticCfg = MISSING
+    policy: RslRlPpoActorMultiCriticCfg = MISSING
     """The policy configuration."""
 
-    algorithm: RslRlPpoAlgorithmCfg = MISSING
+    algorithm: RslRlMultiCriticPpoAlgorithmCfg = MISSING
     """The algorithm configuration."""
 
     clip_actions: float | None = None
