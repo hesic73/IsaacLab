@@ -122,10 +122,16 @@ def update_class_from_dict(obj, data: dict[str, Any], _ns: str = "") -> None:
             elif isinstance(value, type(obj_mem)) or value is None:
                 pass
             else:
-                raise ValueError(
+                # NOTE (hsc): make it a warning instead of an error
+                print("Warning: ")
+                print(
                     f"[Config]: Incorrect type under namespace: {key_ns}."
                     f" Expected: {type(obj_mem)}, Received: {type(value)}."
                 )
+                # raise ValueError(
+                #     f"[Config]: Incorrect type under namespace: {key_ns}."
+                #     f" Expected: {type(obj_mem)}, Received: {type(value)}."
+                # )
             # set value
             if isinstance(obj, dict):
                 obj[key] = value
