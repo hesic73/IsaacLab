@@ -1,3 +1,8 @@
+# Copyright (c) 2022-2025, The Isaac Lab Project Developers (https://github.com/isaac-sim/IsaacLab/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 # Copyright (c) 2022-2025, The Isaac Lab Project Developers.
 # All rights reserved.
 #
@@ -1496,8 +1501,6 @@ def test_output_equal_to_usd_camera_intrinsics(setup_camera):
             intrinsic_matrix=intrinsics,
             height=540,
             width=960,
-            focal_length=38.0,
-            # clipping_range=(0.01, 20),
         ),
         height=540,
         width=960,
@@ -1510,8 +1513,6 @@ def test_output_equal_to_usd_camera_intrinsics(setup_camera):
             intrinsic_matrix=intrinsics,
             height=540,
             width=960,
-            focal_length=38.0,
-            # clipping_range=(0.01, 20),
         ),
         height=540,
         width=960,
